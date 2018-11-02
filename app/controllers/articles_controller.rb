@@ -4,5 +4,10 @@ class ArticlesController < ApplicationController
     
   end
 
+  def create
+    render plain: params[:article].inspect #this line shows the data that was inputted
+   
+  
+  end
 
 end

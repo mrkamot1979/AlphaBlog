@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body><!--this functionality below handles the flash call to display any error messages or notifications -->
   <% flash.each do |name, msg| %> 
   <ul>
     <li><%= msg%></li>

@@ -16,6 +16,10 @@ class ArticlesController < ApplicationController
     
   end
   
+  def show
+    
+  end
+  
   private
     def article_params
       params.require(:article).permit(:title, :description)

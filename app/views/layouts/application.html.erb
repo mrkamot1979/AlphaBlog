@@ -6,8 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body><!--this functionality below handles the flash call to display any error messages or notifications -->
+<body>
 
+<!--this render below handles the flash call to display any error messages or notifications -->
 <%= render 'layouts/messages' %>
 
 <%= yield %>

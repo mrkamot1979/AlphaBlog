@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: [:edit, :update, :show, :destroy]
+  
 
 def index
   @articles = Article.all
@@ -9,7 +11,7 @@ def new
 end
 
 def edit
-  @article = Article.find(params[:id])
+ 
 end
 
 def create #now with a handler that deals with article entry fails validation
@@ -24,7 +26,7 @@ def create #now with a handler that deals with article entry fails validation
 end
   
 def update
-  @article = Article.find(params[:id])
+ 
   if @article.update(article_params)
     flash[:notice] = "Article successfully updated"
     redirect_to article_path(@article)
@@ -35,11 +37,11 @@ end
   
   
 def show
-  @article = Article.find(params[:id])
+  
 end
 
 def destroy
-   @article = Article.find(params[:id])
+  
    @article.destroy
    
    flash[:notice] = "Article was successfully deleted"
@@ -48,6 +50,11 @@ def destroy
 end
   
 private
+  def set_article
+    @article = Article.find(params[:id])
+  end
+  
+  
   def article_params
     params.require(:article).permit(:title, :description)
   end

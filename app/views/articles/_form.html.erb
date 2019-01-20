@@ -27,7 +27,7 @@
       </div>
         
       <div class='col-sm-8'>
-        <%= f.text_area :description, class: 'form-control', placeholder: "Body of article", autofocus: true %>
+        <%= f.text_area :description, rows: 10,class: 'form-control', placeholder: "Body of article", autofocus: true %>
       </div>
     </div>
      <div class='form-group'>
@@ -39,7 +39,7 @@
     <% end %>
     <div class='col-xs-4 col-xs-offset-4'>
   
-    <%= link_to "Back to Articles Index", articles_path %>
+    [ <%= link_to "Cancel request and back to Articles Index", articles_path %> ]
     </div>
   </div>
 </div>
